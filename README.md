@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #win10系统下MarkdownPad2预览无法显示的解决#
 
 一直以来都是使用 [MarkdownPad 2](http://markdownpad.com/) 来写Blog。<br />
@@ -22,3 +23,6 @@ OK， 那就先试试 [Awesomium 1.6.6 SDK.](http://markdownpad.com/download/awe
 
 下载安装，再次打开，一切正常：） 
 
+=======
+# easunlee.github.io
+>>>>>>> origin/master
