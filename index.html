@@ -1,24 +1,440 @@
-#win10系统下MarkdownPad2预览无法显示的解决#
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<meta name="Keywords" content="WebBlog:路杨,WebBlog:路杨,Talk about Movable Type,Perl in China,Small softwares and Journals," />
+<meta name="description" content="WebBlog:路杨 - Easun.org - 路杨" />
+<link rel="stylesheet" href="//static.easunlee.cn/css/styles.css?md=2015.07.15.10" type="text/css" />
+<link rel="start" href="http://easun.org/" title="Home" />
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="http://easun.org/blog/atom.xml" />
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en-us">
+<meta property="og:title" content="WebBlog:路杨">
+<meta property="og:url" content="http://easun.org/blog/">
+<meta property="og:description" content="Talk about Movable Type,Perl in China,Small softwares and Journals">
+<meta property="og:site_name" content="WebBlog:路杨">
+<meta property="og:image" content="http://static.easunlee.cn/site_images/easun_site_image.png">
+<!-- Microdata -->
+<meta itemprop="description" content="Talk about Movable Type,Perl in China,Small softwares and Journals">
+<link itemprop="url" href="http://easun.org/blog/">
+<link itemprop="image" href="http://static.easunlee.cn/site_images/easun_site_image.png">
+<title>WebBlog:路杨 - Easun.org - 路杨</title>
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="//static.easunlee.cn/css/ie.css">
+<script src="//static.easunlee.cn/js/html5shiv.js"></script>
+<![endif]-->
+<link rel="shortcut icon" href="//static.easunlee.cn/images/favicon.ico" type="image/x-icon" />
+</head>
+<body id="theme-from-blog" class="mt-main-index layout-wm">
+<div id="pagewrap">
+<header id="header">
+<hgroup>
+<a id="site-logo" href="http://easun.org/" title="Easun.org" alt="Easun.org" >Easun.org</a>
+<div id="site-name"><a href="http://easun.org/blog/" accesskey="1">WebBlog:路杨</a></div>
+<div id="site-description">Talk about Movable Type,Perl in China,Small softwares and Journals</div>
+</hgroup>
+<section class="widget-sign-in widget"><h3 class="widget-header">Sign In</h3><div id="signin-widget-content" class="widget-content">Sign In</div></section>
+<nav role="navigation"><span class="toggle" id="main-nav-toggle" role="button" aria-controls="main-nav" aria-expanded="false" tabindex="0">Menu</span>
+<ul id="main-nav" class="clearfix">
+<li id="top_site_home" class="first "><a href="//easun.org/" title="Easun's HomePage">Home</a></li>
+<li id="top_blog_index" class="on" ><a href="//easun.org/blog/" title="Easun's Blog">WebBlog</a></li>
+<li id="top_perl" ><a href="//easun.org/perl/" title="Easun's Perl-Site">Perl Site</a></li>
+<li id="top_ossu" ><a href="http://ossu.easun.org/" title="Go to Easun OS Switch Utility HomePage" target="_blank">OS Switch Utility</a></li>
+<li id="top_about" ><a href="//easun.org/about/" title="About Easun">About</a></li>
+<li id="feed_top" class="last"><a href="http://easun.org/blog/atom.xml" title="Subscribe to My WebBlog's feed">Blog Feed</a></li>
+</ul></nav>
+<div class="searchform"><input name="q" type="text" id="search" placeholder="Search" ></div>
+</header>
+<div id="homepage-image">&nbsp;</div>
+<div id="content" role="main">
+<div id="nav-addon">
+<a href="http://easun.org/blog/archives.html" title="All Articles Archives ">Web Archives</a> - <a href="http://easun.org/blog/tag/" title="Tag Cloud of Easun's blog">Tag Cloud</a>
+</div>
 
-一直以来都是使用 [MarkdownPad 2](http://markdownpad.com/) 来写Blog。<br />
-在win7系统下，这个是写 [Markdown](http://www.baidu.com/s?wd=Markdown&ie=UTF-8) 格式文档的利器，因为其的实时预览模式，实在是太强悍了。  
-但是最近[升级到了win10](http://easun.org/blog/archives/windows_10_is_coming.html)，打开 [MarkdownPad 2](http://markdownpad.com/) 后，实时预览功能居然失效了，提示如图。
+<div class="progress" id="progressbar"></div>
+<div id="search-results">
 
-![](http://i.imgur.com/28AEzhH.png) 
 
-难道要逼我换软件吗？ 在 [http://markdownpad.com/faq.html#livepreview-directx](http://markdownpad.com/faq.html#livepreview-directx) 这里发现了一些信息：
 
-> **LivePreview is not working - it displays an error message stating This view has crashed!**
-> 
-> This issue has been specifically observed in Windows 8. You may see an error message as shown here, and no HTML will be rendered when you type in the Markdown Editor pane.
-> 
-> To fix this issue, please try installing the [Awesomium 1.6.6 SDK.](http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe)
-> 
-> If you continue to experience issues, please install Microsoft's DirectX End-User Runtimes (June 2010).
+<div id="page1" rel="page1">
 
-OK， 那就先试试 [Awesomium 1.6.6 SDK.](http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe)
 
-下载，My God，居然 110 M。。。。
+  <article class="post clearfix">
+<header>
+ <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/win10_markdownpad2_livepreview_err .html" rel="bookmark">win10下MarkdownPad2预览无法显示的解决</a>
+ 
+<small><a href="http://easun.org/blog/soft/" rel="tag">软海拾贝</a></small>
 
-下载安装，再次打开，一切正常：） 
+</h2>
+    <p class="post-meta">
+    <span class="byline">
 
+        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-22T19:56:11+08:00">2015-08-22 19:56</abbr>
+
+    </span>
+
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/win10_markdownpad2_livepreview_err .html#comments">0 Comments</a>
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/win10_markdownpad2_livepreview_err .html#trackbacks">0 TrackBacks</a>
+
+</p>
+ 
+</header>
+
+<div class="asset-body"><p>一直以来都是使用 <a href="http://markdownpad.com/">MarkdownPad 2</a> 来写Blog。<br />
+在win7系统下，这个是写 <a href="http://www.baidu.com/s?wd=Markdown&amp;ie=UTF-8">Markdown</a> 格式文档的利器，因为其的实时预览模式，实在是太强悍了。 <br />
+但是最近<a href="http://easun.org/blog/archives/windows_10_is_coming.html">升级到了win10</a>，打开 <a href="http://markdownpad.com/">MarkdownPad 2</a> 后，实时预览功能居然失效了，提示如图。
+<a data-lightbox="easun" href="http://easun.org/blog/upload/md_pd.png"><img alt="md_pd.png" src="http://easun.org/blog/upload/cache/2015/08/md_pd-thumb-350xauto-65.png" width="350" height="196" class="mt-image-none" style="" /></a></p>
+
+<p>难道要逼我换软件吗？ 在 <a href="http://markdownpad.com/faq.html#livepreview-directx">http://markdownpad.com/faq.html#livepreview-directx</a> 这里发现了一些信息：</p>
+
+<blockquote>
+  <p><strong>LivePreview is not working - it displays an error message stating This view has crashed!</strong></p>
+
+<p>This issue has been specifically observed in Windows 8. You may see an error message as shown here, and no HTML will be rendered when you type in the Markdown Editor pane.</p>
+
+<p>To fix this issue, please try installing the <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK.</a></p>
+
+<p>If you continue to experience issues, please install Microsoft's DirectX End-User Runtimes (June 2010).</p>
+</blockquote>
+
+<p>OK， 那就先试试 <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK.</a></p>
+
+<p>下载，My God，居然 110 M。。。。</p>
+
+<p>下载安装，再次打开，一切正常：） </p>
+
+<p><a data-lightbox="easun" href="http://easun.org/blog/upload/md_pd_ok.png"><img alt="md_pd_ok.png" src="http://easun.org/blog/upload/cache/2015/08/md_pd_ok-thumb-350xauto-66.png" width="350" height="210" class="mt-image-none" style="" /></a></p>
+</div>
+
+<section class="entry-tags">
+    <h4>Tags<span class="delimiter">:</span></h4>
+    <ul>
+        <li><a href="http://easun.org/blog/tag/MarkdownPad2" rel="tag">MarkdownPad2</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/win10" rel="tag">win10</a></li>
+    </ul>
+</section>
+
+
+
+
+<p>--<acronym title="End of File">EOF</acronym>--</p>
+
+<p> </p>
+</article>
+
+
+  <article class="post clearfix">
+<header>
+ <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/sitelog_aug_sth.html" rel="bookmark">[SiteLog]近日网站折腾小记</a>
+ 
+<small><a href="http://easun.org/blog/program/" rel="tag">程序人生</a></small>,<small><a href="http://easun.org/blog/sitelog/" rel="tag">站务记录</a></small>
+
+</h2>
+    <p class="post-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-22T17:42:52+08:00">2015-08-22 17:42</abbr>
+
+    </span>
+
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sitelog_aug_sth.html#comments">0 Comments</a>
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sitelog_aug_sth.html#trackbacks">0 TrackBacks</a>
+
+</p>
+ 
+</header>
+
+<div class="asset-body"><p>8月快过去了。时间真的是。。。。 <br />
+顺便记下这几天对网站的一些小小的折腾吧。</p>
+
+<p><strong>1. 多说评论显示逻辑调整：</strong>   </p>
+
+<p>还是要从<a href="http://duoshuo.com/">多说</a>说起： 路杨已经基本上<a href="http://easun.org/blog/archives/sth_about_mt_db.html">实现了把所有的多说评论同步到了本地</a>。 默认同步到多说评论处于未发布状态，防止和多说JS载入的评论形成重复评论。 定时把本地数据库的多说评论转成发布状态，以防止多说服务器抽风导致评论不显示。</p>
+
+<p>但是问题来了： 怎么让同步并本地发布的同一条评论只显示一次呢？ 原来的实现办法是在 <a href="http://static.duoshuo.com/embed.js">多说JS</a> 中识别这条评论是否已经本地发布，如果发布则 hook <a href="http://static.duoshuo.com/embed.js">多说JS</a> 的 <code>templates.post</code> 函数，<strong>让它不生成这条评论</strong>。<br />
+核心代码如下：</p>
+
+<pre><code>var DSinMTids = [];
+function check_ds_in_mts() {
+   DSinMTids = [];
+   $("#comments-content div.ds-post-self").each(function()
+   { 
+     if ( ( $(this).attr("data-source") == 'duoshuo' ))
+      { 
+       DSinMTids.push($(this).attr("data-post-id"));
+      }
+  });
+}
+
+check_ds_in_mts(); 
+var _D_post=DUOSHUO.templates.post; 
+DUOSHUO.templates.post=function (e,t){
+  var rs=_D_post(e,t);            
+  if ( $.inArray(e.post.post_id, DSinMTids) != -1 return '';
+  /* sth others*/
+  return rs;
+}
+</code></pre>
+</div>
+
+<section class="entry-tags">
+    <h4>Tags<span class="delimiter">:</span></h4>
+    <ul>
+        <li><a href="http://easun.org/blog/tag/js" rel="tag">js</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/pjax" rel="tag">pjax</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/QQ%E4%BA%92%E8%81%94" rel="tag">QQ互联</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/SiteLog" rel="tag">SiteLog</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E8%AF%84%E8%AE%BA" rel="tag">评论</a></li>
+    </ul>
+</section>
+
+
+
+
+        <p class="asset-more-link">
+        <span class="read_more">»继续阅读</span> "<a href="http://easun.org/blog/archives/sitelog_aug_sth.html#more" rel="bookmark">[SiteLog]近日网站折腾小记</a>" 。
+        </p>
+
+<p> </p>
+</article>
+
+
+  <article class="post clearfix">
+<header>
+ <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/sth_about_mt_db.html" rel="bookmark">[随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>
+ 
+<small><a href="http://easun.org/blog/mt/" rel="tag">Movable Type</a></small>,<small><a href="http://easun.org/blog/perl/" rel="tag">Perl</a></small>
+
+</h2>
+    <p class="post-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-17T22:42:11+08:00">2015-08-17 22:42</abbr>
+
+    </span>
+
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#comments">6 Comments</a>
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#trackbacks">1 TrackBack</a>
+
+</p>
+ 
+</header>
+
+<div class="asset-body"><p><strong>随笔</strong> 而已，能力所限，只是个人看法。</p>
+
+<p>就向大家看见的这样，由于<a href="http://duoshuo.com/">多说</a>服务器的原因，路杨正在逐步把 多说的评论写回本地 <a href="http://www.movabletype.org/">Movable Type</a> 的数据库。</p>
+
+<p>过程不算难。通过 <a href="http://dev.duoshuo.com/docs/50037b11b66af78d0c000009">API</a> 获得 JSON 数据，分析后写入MT评论数据库罢了。
+为了区分和拓展，给 MT 数据库的评论表增加了3行，分别记录 远程服务器名（<code>remote_service</code>），远程服务器ID (<code>remote_id</code>) 和 UA (
+<code>agent</code>)。</p>
+
+<p><a data-lightbox="easun" href="http://easun.org/blog/upload/mt_db_table_comment.png"><img alt="mt_db_table_comment.png" src="http://easun.org/blog/upload/cache/2015/08/mt_db_table_comment-thumb-350xauto-62.png" width="350" height="291" class="mt-image-none" style="" /></a></p>
+
+<p>开始直接 Perl 脚本。核心代码为 </p>
+</div>
+
+<section class="entry-tags">
+    <h4>Tags<span class="delimiter">:</span></h4>
+    <ul>
+        <li><a href="http://easun.org/blog/tag/MT" rel="tag">MT</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/MySQL" rel="tag">MySQL</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/Perl" rel="tag">Perl</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E7%93%B6%E9%A2%88" rel="tag">瓶颈</a></li>
+    </ul>
+</section>
+
+
+
+
+        <p class="asset-more-link">
+        <span class="read_more">»继续阅读</span> "<a href="http://easun.org/blog/archives/sth_about_mt_db.html#more" rel="bookmark">[随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>" 。
+        </p>
+
+<p> </p>
+</article>
+
+
+  <article class="post clearfix">
+<header>
+ <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/about_duoshuo_db.html" rel="bookmark">[随笔]多说的几项不足</a>
+ 
+<small><a href="http://easun.org/blog/other/" rel="tag">八卦杂谈</a></small>,<small><a href="http://easun.org/blog/sitelog/" rel="tag">站务记录</a></small>
+
+</h2>
+    <p class="post-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-12T16:49:03+08:00">2015-08-12 16:49</abbr>
+
+    </span>
+
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#comments">8 Comments</a>
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#trackbacks">0 TrackBacks</a>
+
+</p>
+ 
+</header>
+
+<div class="asset-body"><p><a data-lightbox="easun" href="http://easun.org/blog/upload/ds.png"><img alt="ds.png" src="http://easun.org/blog/upload/cache/2015/08/ds-thumb-350xauto-58.png" width="350" height="145" class="mt-image-none" style="" /></a></p>
+
+<p>昨天晚上，又经历了一次<a href="http://duoshuo.com/">多说</a>服务器的当机。<code>SQLSTATE[08004] [1040] Too many connections</code> 。显然是数据库连接数超过资源限制。 <br />
+于是乎，多说的稳定性又得到了挑战。   </p>
+
+<p>看看长草的<a href="http://dev.duoshuo.com/discussion">官方</a> 和久久不更新的<a href="http://dev.duoshuo.com/blog">Blog</a>。。不由叹息： 这本来是多好的互联网产品啊。。。</p>
+
+<p>不说这些了。这几天抽空在研究 <a href="http://dev.duoshuo.com/docs">多说的API</a>，为把多说的评论同步回本地而做准备。 研究过程中谈谈多说的一些不足吧。</p>
+
+<ol start='1'>
+<li><strong>API文档严重不足</strong>： 这倒是像搞技术的通病。茶壶里的饺子的事情，不说也罢。 不单是多说的API这样，腾讯的<a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5">API文档</a>也是。</li>
+<li><strong>数据库储存逻辑</strong>很奇怪。 从<a href="http://dev.duoshuo.com/docs/50037b11b66af78d0c000009">反向同步API</a>返回的数据来看。 多说对于用户评论并没有真正的删除说法，而是永久存储？ 所谓的删除仅仅是新加上一条记录。 设置 <code>meta</code> 为 <code>delete</code> 或者 <code>delete-forever</code>。 开始没有搞明白这个逻辑，将 <code>http://api.duoshuo.com/log/list.json?short_name=short_name&amp;secret=secret_key&amp;limit=200</code> 拉下来的数据直接写入数据库，发现了很多已经删除的评论。。。  <br />多说的数据库真的富裕成这个样子了吗？</li>
+<li><strong>用户</strong>。 在多说管理界面添加或者<a href="http://dev.duoshuo.com/docs/51435552047fe92f490225de">同步的本地用户</a>（<code>http://short_name.duoshuo.com/admin/users/</code>）无法删除。。 这个是什么逻辑？</li>
+<li><strong>删除评论</strong>： API文档中没有告诉你怎么<strong>删除评论</strong>。 只有怎么<a href="http://dev.duoshuo.com/docs/512d6e2e418847315a000001">发表评论</a>。 其实这个删除功能还是很必要的，我的想法，同步到本地后随即删除已经同步的的远程服务器评论，是一个多么合适的选择。可惜，官方并没有提供。</li>
+<li>对于 <code>ssl(https)</code> 的漠视： 其实多说自身的代码已经很好的支持<code>https</code> ,但是在 https 下会汇报风险的原因，只是因为头像和表情的地址不支持 https 罢了。 但是官方客服在讨论区中明确回复： <code>头像和表情不需要HTTPS.</code>。 虽然，第3方修改JS可以完全实现全站https, 但是第3方的修改总是第3方的。</li>
+</ol>
+
+<p>嗯，随便写点流水帐。 附上自写的部分处理逻辑</p>
+
+<pre><code>    return if ( @{$action-&gt;{'delete-forever'}} ~~ /$ds-&gt;{'post_id'}/ );
+    return if ( @{$action-&gt;{'delete'}} ~~ /$ds-&gt;{'post_id'}/);
+    return if ( @{$action-&gt;{'spam'}} ~~ /$ds-&gt;{'post_id'}/);
+</code></pre>
+</div>
+
+<section class="entry-tags">
+    <h4>Tags<span class="delimiter">:</span></h4>
+    <ul>
+        <li><a href="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E8%AF%84%E8%AE%BA" rel="tag">评论</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E9%9A%8F%E7%AC%94" rel="tag">随笔</a></li>
+    </ul>
+</section>
+
+
+
+
+<p>--<acronym title="End of File">EOF</acronym>--</p>
+
+<p> </p>
+</article>
+
+
+  <article class="post clearfix">
+<header>
+ <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/aliyun_hosting_free.html" rel="bookmark">关于阿里云虚拟主机-免费版的那些事</a>
+ 
+<small><a href="http://easun.org/blog/other/" rel="tag">八卦杂谈</a></small>
+
+</h2>
+    <p class="post-meta">
+    <span class="byline">
+
+        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-06T15:16:52+08:00">2015-08-06 15:16</abbr>
+
+    </span>
+
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/aliyun_hosting_free.html#comments">19 Comments</a>
+    <span class="separator">|</span> <a href="http://easun.org/blog/archives/aliyun_hosting_free.html#trackbacks">0 TrackBacks</a>
+
+</p>
+ 
+</header>
+
+<div class="asset-body"><p><a href="http://wanwang.aliyun.com">万网</a>被<a href="http://www.aliyun.com/">阿里</a>吃了。 也许是阿里系的大气。终于看见了一款免费的国内版虚拟主机。 
+见下图   </p>
+
+<p><a data-lightbox="easun" href="http://easun.org/blog/upload/ali-free-host.png"><img alt="ali-free-host.png" src="http://easun.org/blog/upload/cache/2015/08/ali-free-host-thumb-350xauto-54.png" width="350" height="245" class="mt-image-none" style="" /></a></p>
+
+<p>申请地址： </p>
+
+<blockquote>
+  <p><a href="http://wanwang.aliyun.com/hosting/free/">http://wanwang.aliyun.com/hosting/free/</a>  </p>
+</blockquote>
+
+<p>开通条件很简单： <strong>实名认证</strong>-><strong>转发微博</strong>-><strong>确认开启</strong>。  </p>
+
+<p>配置为: </p>
+
+<blockquote>
+  <p>1G网页空间,10G月流量,50M数据库.免费2年。   </p>
+</blockquote>
+
+<p>对于个人站点来说，配置还算中规中矩吧。。。   </p>
+
+<p>抱着实验的性质，路杨也小小的测试了一把。 <br />
+<a data-lightbox="easun" href="http://easun.org/blog/upload/ali-free-host2.png"><img alt="ali-free-host2.png" src="http://easun.org/blog/upload/cache/2015/08/ali-free-host2-thumb-350xauto-56.png" width="350" height="225" class="mt-image-none" style="" /></a></p>
+
+<p>简单说说一些亲身体会：</p>
+
+<ol start='1'>
+<li>速度： 的确很快，比我的 <a href="https://www.godaddy.com/">Godaddy</a> 空间速度不在同一个数量级，究竟在国内。</li>
+<li>FTP： 只支持传统的 21 端口的 ftp， ssh权限没有找到，故而22端口的 sftp是不支持的。 而我的单位无法访问21端口，直接导致我无法在单位进行ftp管理。</li>
+<li>备案： 域名和空间必须备案。这个也是没有办法的事情～～ 但是备案的效率实在是。。。我7月17日申请。，到现在还是审核中。。</li>
+<li>CDN: 无法直接给子目录绑定域名。 想子目录CDN的可以PASS了，当然全站CDN应该没有问题</li>
+</ol>
+
+<p>总结： </p>
+
+<blockquote>
+  <p>对于不怕备案麻烦的朋友来说，这个空间还是很值得的， 2年免费期。。而且速度很快。</p>
+</blockquote>
+</div>
+
+<section class="entry-tags">
+    <h4>Tags<span class="delimiter">:</span></h4>
+    <ul>
+        <li><a href="http://easun.org/blog/tag/%E4%B8%BB%E6%9C%BA" rel="tag">主机</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E5%85%8D%E8%B4%B9" rel="tag">免费</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E9%98%BF%E9%87%8C%E4%BA%91" rel="tag">阿里云</a></li>
+    </ul>
+</section>
+
+
+
+
+<p>--<acronym title="End of File">EOF</acronym>--</p>
+
+<p> </p>
+</article>
+
+
+<span id="current-page" class="hidden">1</span>
+
+
+<nav class="navigation"><ul class="pagination"><li><a class="active" href="http://easun.org/blog/" title="当前页">1</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=2" title="第2页">2</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=3" title="第3页">3</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=4" title="第4页">4</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=5" title="第5页">5</a></li> <li><a rel="prev" href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=2" title="下一页">下一页»</a></li> <li><a rel="end" href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=51" title="尾页">尾页</a></li></ul></nav>
+
+</div>
+
+</div>
+
+<div class="show-more"><span class="show-more" id="show-more" data-type="index" data-nexturl="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=2" data-index-totalpages="51">第1页/共51页，加载更多</span></div>
+</div><!-- /#content -->
+<aside id="sidebar">
+<section class="widget-tag-cloud widget"> <h3 class="widget-header"><a href="http://easun.org/blog/tag/" title="Tag Cloud of Easun's blog">Tag Cloud</a></h3> <ul> <li class="rank-1"><a href ="http://easun.org/blog/tag/MT" rel="tag">MT</a></li> <li class="rank-2"><a href ="http://easun.org/blog/tag/SiteLog" rel="tag">SiteLog</a></li> <li class="rank-2"><a href ="http://easun.org/blog/tag/Perl" rel="tag">Perl</a></li> <li class="rank-3"><a href ="http://easun.org/blog/tag/%E9%9A%8F%E7%AC%94" rel="tag">随笔</a></li> <li class="rank-4"><a href ="http://easun.org/blog/tag/MT4" rel="tag">MT4</a></li> <li class="rank-4"><a href ="http://easun.org/blog/tag/Hack" rel="tag">Hack</a></li> <li class="rank-5"><a href ="http://easun.org/blog/tag/LB" rel="tag">LB</a></li> <li class="rank-5"><a href ="http://easun.org/blog/tag/plugin" rel="tag">plugin</a></li> <li class="rank-5"><a href ="http://easun.org/blog/tag/js" rel="tag">js</a></li> <li class="rank-5"><a href ="http://easun.org/blog/tag/PerlChina" rel="tag">PerlChina</a></li> <li class="rank-6"><a href ="http://easun.org/blog/tag/Template" rel="tag">Template</a></li> <li class="rank-6"><a href ="http://easun.org/blog/tag/htaccess" rel="tag">htaccess</a></li> <li class="rank-6"><a href ="http://easun.org/blog/tag/%E6%A8%A1%E6%9D%BF" rel="tag">模板</a></li> <li class="rank-6"><a href ="http://easun.org/blog/tag/FeedSky" rel="tag">FeedSky</a></li> <li class="rank-6"><a href ="http://easun.org/blog/tag/%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6" rel="tag">杀毒软件</a></li> <li class="rank-7"><a href ="http://easun.org/blog/tag/Blog" rel="tag">Blog</a></li> <li class="rank-7"><a href ="http://easun.org/blog/tag/Tag" rel="tag">Tag</a></li> <li class="rank-7"><a href ="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a></li> <li class="rank-7"><a href ="http://easun.org/blog/tag/Ajax" rel="tag">Ajax</a></li> <li class="rank-7"><a href ="http://easun.org/blog/tag/CSS" rel="tag">CSS</a></li> </ul></section>
+<section class="widget-archive widget-archive-category widget"> <h3 class="widget-header">Categories</h3> <ul> <li><a href="http://easun.org/blog/program/" title="部分原创代码和程序边缘的一些话题">程序人生 (39)</a> </li> <li><a href="http://easun.org/blog/perl/" title="自己写的一些Perl脚本以及Perl相关信息">Perl (43)</a> </li> <li><a href="http://easun.org/blog/mt/" title="Movable Type 相关修改，插件，技巧，新闻，八卦">Movable Type (52)</a> </li> <li><a href="http://easun.org/blog/soft/" title="一些实用软件的推介，原创评测，技巧介绍">软海拾贝 (17)</a> </li> <li><a href="http://easun.org/blog/other/" title="闲言碎语,自我观点">八卦杂谈 (81)</a> </li> <li><a href="http://easun.org/blog/life/" title="我的生活，我的心情，和你共享共勉">心情故事 (32)</a> </li> <li><a href="http://easun.org/blog/book_review/" title="读书笔记,天马行空，想说就说">漫谈书卷 (10)</a> </li> <li><a href="http://easun.org/blog/sitelog/" title="站务记录,记录小站的点点滴滴">站务记录 (44)</a> </li> </ul> </section> <section class="widget-archive-yearly widget-archive widget"> <h3 class="widget-header">Yearly <a href="http://easun.org/blog/archives.html">Archives</a></h3> <ul> <li><a href="http://easun.org/blog/archives/2015.html">2015年的归档 (34)</a></li> <li><a href="http://easun.org/blog/archives/2012.html">2012年的归档 (13)</a></li> <li><a href="http://easun.org/blog/archives/2011.html">2011年的归档 (4)</a></li> <li><a href="http://easun.org/blog/archives/2010.html">2010年的归档 (6)</a></li> <li><a href="http://easun.org/blog/archives/2009.html">2009年的归档 (12)</a></li> <li><a href="http://easun.org/blog/archives/2008.html">2008年的归档 (27)</a></li> <li><a href="http://easun.org/blog/archives/2007.html">2007年的归档 (61)</a></li> <li><a href="http://easun.org/blog/archives/2006.html">2006年的归档 (66)</a></li> <li><a href="http://easun.org/blog/archives/2005.html">2005年的归档 (13)</a></li> <li><a href="http://easun.org/blog/archives/2004.html">2004年的归档 (15)</a></li> </ul></section>
+<section class="widget-recent-comments widget"> <h3 class="widget-header">Recent Comments</h3> <ul> <li> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#comment-2239">路杨 commented on [随笔]多说的几项不足</a>: 不知～好产品还需 </li> <li> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#comment-2238">Page commented on [随笔]多说的几项不足</a>: 什么问题知道吗？ </li> <li> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#comment-2237">路杨 commented on [随笔]多说的几项不足</a>: 其实还是运作的缘故。 </li> <li> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#comment-2236">Page commented on [随笔]多说的几项不足</a>: 不盈利就是这样。。。 </li> <li> <a href="http://easun.org/blog/archives/aliyun_hosting_free.html#comment-2235">路杨 commented on 关于阿里云虚拟主机-免费版的那些事</a>: 反正免费。玩玩罢了 </li> <li> <a href="http://easun.org/blog/archives/aliyun_hosting_free.html#comment-2234">老杨 commented on 关于阿里云虚拟主机-免费版的那些事</a>: 真心爱不上~ </li> <li> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#comment-2230">路杨 commented on [随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>: 欢迎来访。这个系统 </li> <li> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#comment-2229">一树小草 commented on [随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>: 这个博客系统我还是第 </li> <li> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#comment-2228">路杨_MT commented on [随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>: 嗯。 究竟不是正式授 </li> <li> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#comment-2227">jackie commented on [随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>: 6A的日本官网上可以 </li> </ul></section>
+<section class="widget-syndication widget"><img src="http://static.easunlee.cn/mt-static/images/status_icons/feed.gif" alt="Subscribe to feed" width="9" height="9" /> <a href="http://easun.org/blog/atom.xml">Subscribe to this blog's feed</a></section>
+</aside>
+<footer id="footer">
+<section class="widget-powered widget"><span>Powered by <a href="http://www.movabletype.org/">Movable Type Pro</a></span></section>
+<section class="widget-footer-links widget"><h4 class="widget-header">Links</h4>
+<ul><li><a href="https://www.upyun.com/"><img src="http://upfiles.b0.upaiyun.com/logo/90x45.png" alt="UPYUN"></a></li>
+<li>Copyright © 1998-2015 <a href="http://easun.org/about/">路杨(Easun Lee)</a> , All Rights Reserved</li></ul>
+</section>
+<section class="widget-creative-commons widget">
+This blog is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons License</a>.
+</section>
+</footer>
+</div><!-- /#pagewrap -->
+<!-- script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="//static.easunlee.cn/js/jquery-1.11.0.min.js"><\/script>')</script>
+<script src="//static.easunlee.cn/js/mt.js?md=2015.07.15.10"></script>
+<script>
+/* <![CDATA[ */
+var blog_id = '2';
+var page_id = '';
+mtAttachEvent('usersignin', mtUpdateSignInWidget);mtUpdateSignInWidget();
+$(document).ready(function(){Pagination_ajax(); });
+/* ]]> */
+</script>
+<script type="text/javascript">/* <![CDATA[ */$(function() { var _surl = "http://easun.org/search/" ; $('#search').keydown(function(e){ var sq = $(this).val(); if ( (sq !='') && (e.keyCode=="13")){location.href = _surl + "#stq=" + encodeURIComponent(sq) + "&stp=1" ; } });});/* ]]> */</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-683520-1', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
