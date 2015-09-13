@@ -1,4 +1,5 @@
 {
   "proxy"       : "http://127.0.0.1:7575",
-    "strict-ssl"  : false
+  "https-proxy"      : "http://127.0.0.1:7575",
+   "strict-ssl"  : false
 } 
