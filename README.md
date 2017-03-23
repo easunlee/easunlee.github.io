@@ -1,4 +1,4 @@
-#win10系统下MarkdownPad2预览无法显示的解决
+# win10系统下MarkdownPad2预览无法显示的解决
 
 一直以来都是使用 [MarkdownPad 2](http://markdownpad.com/) 来写Blog。<br />
 在win7系统下，这个是写 [Markdown](http://www.baidu.com/s?wd=Markdown&ie=UTF-8) 格式文档的利器，因为其的实时预览模式，实在是太强悍了。  
