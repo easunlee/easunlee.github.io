@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="Keywords" content="WebBlog:路杨,WebBlog:路杨,Talk about Movable Type,Perl in China,Small softwares and Journals," />
 <meta name="description" content="WebBlog:路杨 - Easun.org - 路杨" />
 <link rel="stylesheet" href="//static.easunlee.cn/css/styles.css?md=2015.07.15.10" type="text/css" />
@@ -55,362 +55,9 @@
 
 <div class="progress" id="progressbar"></div>
 <div id="search-results">
-
-
-
-<div id="page1" rel="page1">
-
-
-  <article class="post clearfix">
-<header>
- <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/qq_connect_commenters_plugin_for_movable_type.html" rel="bookmark">[MT Plugin]QQ互联插件-用QQ账号登陆您的MT</a>
- 
-<small><a href="http://easun.org/blog/mt/" rel="tag">Movable Type</a></small>,<small><a href="http://easun.org/blog/perl/" rel="tag">Perl</a></small>
-
-</h2>
-    <p class="post-meta">
-    <span class="byline">
-
-        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-27T21:22:35+08:00">2015-08-27 21:22</abbr>
-
-    </span>
-
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/qq_connect_commenters_plugin_for_movable_type.html#comments">2 Comments</a>
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/qq_connect_commenters_plugin_for_movable_type.html#trackbacks">0 TrackBacks</a>
-
-</p>
- 
-</header>
-
-<div class="asset-body"><h1>QQ互联插件-用QQ账号登陆您的MT</h1>
-
-<p>( QQ Connect Commenters Plugin for Movable Type )</p>
-
-<p>Authors:<a href="http://easun.org/"> 路杨 (EasunLee)</a>
-Copyright 2015 <a href="http://easun.org/">Easun.org</a>.
-License: Artistic, licensed under the same terms as Perl itself</p>
-
-<p><a data-lightbox="easun" href="http://easun.org/blog/upload/qq_login.png"><img alt="qq_login.png" src="http://easun.org/blog/upload/cache/2015/08/qq_login-thumb-350xauto-72.png" width="350" height="235" class="mt-image-none" style="" /></a></p>
-
-<h2>概述</h2>
-
-<p>MT QQ互联插件 (QQ Connect Commenters plugin for Movable Type) 允许用户用 QQ 号码登陆你的 <a href="https://movabletype.org/">Movable Type</a> 博客。<br>
-本插件严格使用 <a href="http://connect.qq.com">QQ互联</a> 的 Open API 编写。安全可靠。
-它可以给您的博客带来良好的用户体验。
-一旦使用这个插件，评论者可以自动获取QQ昵称、头像等资源。</p>
-
-<p><strong>请注意:</strong> <a href="http://connect.qq.com">QQ互联 （QQ Connect）</a>官方使用的机制是审核制度，并不是使用这个插件就直接可以使用QQ登陆。 您需要去  <a href="http://connect.qq.com/intro/login">QQ互联 （QQ Connect）</a> 官方注册您使用本插件的网站并获取属于自己的 APPID 并提交审核。审核过程可能需要1周或者更长时间。</p>
-
-<p>关于 <a href="http://connect.qq.com">QQ互联 （QQ Connect）</a> 的注册，请 百度 之。或者读取官方资料： <a href="http://wiki.connect.qq.com/">http://wiki.connect.qq.com/</a>。</p>
-
-<h2>运行环境</h2>
-
-<ul>
-<li>Movable Type 4.2 或者更高版本</li>
-<li>JSON::XS 2.0 或者更高版本</li>
-<li>jQuery  (非必需，建议)</li>
-</ul>
-
-<p>Movable Type 的 <code>extlib</code> 中已经包含了必需的 JSON：XS 版本。</p>
-
-<h2>安装</h2>
-
-<ol start='1'>
-<li><p><a href="https://github.com/easunlee/mt-plugin-qq-connect-commenters/archive/master.zip">下载</a>并解压本插件。</p></li>
-<li><p>复制(上传) <code>QQCommenters/mt-static</code> 下的内容到 <code>/path/to/mt/mt-static/</code></p></li>
-<li><p>复制(上传) <code>QQCommenters/plugins</code> 下的内容到 <code>/path/to/mt/plugins/</code></p></li>
-<li><p>登陆您的 Movable Type 后台 -> <code>Plugin Settings</code> 去设置您的 QQ <code>APP ID</code> 和 <code>APP KEY</code>。 <br /></p></li>
-<li>在 后台-><code>Registration Settings</code> -> <code>Authentication Methods</code> 中选启用 QQ 。<br /></li>
-<li>在前台选择登陆，您会看见 QQ 登陆 的选项已经有了。 如果您的网站通过审核，可以之直接使用了。</li>
-</ol>
-
-<h2>关于 QQ互联 功能的申请</h2>
-
-<p>关于 QQ互联 功能的申请，简单减少一下流程：</p>
-
-<ol start='1'>
-<li>用您的QQ账号登陆 <a href="http://connect.qq.com/intro/login">http://connect.qq.com/intro/login</a> 并申请网站接入。 </li>
-<li>详细描述您要接入的网站信息。请注意 <strong>回调地址</strong> 一定要填写为<strong>您的Movable Type 后台 <code>CommentScript</code> 的完整地址，并且带上 <code>http://</code> 或者 <code>https://</code> 的前缀</strong>。比如 (<code>http://your_domain/cgi-bin/mt/mt-comments.cgi</code>)。 <br >可以设置多个回调地址，用 分号 分开即可。 <a href="http://connect.qq.com">QQ互联 （QQ Connect）</a> 的官方APP帮助文档 写的像浆糊一样，而且处处错误。这个地方官方文档写就是有问题。</li>
-<li>腾讯 的QQ <a href="http://wiki.connect.qq.com/%E7%BD%91%E7%AB%99%E6%8E%A5%E5%85%A5%E6%B5%81%E7%A8%8B">登陆审核</a>一个要求，就是登陆页面要设置 <strong>醒目的QQ登录入口</strong>。而我们的前端如果不做修改的话，会很简洁，这个就需要自己在前台放端代码。 简单的分享一下我的一些前端 JS 代码：<br />  </li>
-</ol>
+<span id="current-page" class="hidden">0</span>
 </div>
-
-<section class="entry-tags">
-    <h4>Tags<span class="delimiter">:</span></h4>
-    <ul>
-        <li><a href="http://easun.org/blog/tag/MT" rel="tag">MT</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/Perl" rel="tag">Perl</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/plugin" rel="tag">plugin</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/QQ%E4%BA%92%E8%81%94" rel="tag">QQ互联</a></li>
-    </ul>
-</section>
-
-
-
-
-        <p class="asset-more-link">
-        <span class="read_more">»继续阅读</span> "<a href="http://easun.org/blog/archives/qq_connect_commenters_plugin_for_movable_type.html#more" rel="bookmark">[MT Plugin]QQ互联插件-用QQ账号登陆您的MT</a>" 。
-        </p>
-
-<p> </p>
-</article>
-
-
-  <article class="post clearfix">
-<header>
- <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/win10_markdownpad2_livepreview_err.html" rel="bookmark">win10下MarkdownPad2预览无法显示的解决</a>
- 
-<small><a href="http://easun.org/blog/soft/" rel="tag">软海拾贝</a></small>
-
-</h2>
-    <p class="post-meta">
-    <span class="byline">
-
-        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-22T19:56:11+08:00">2015-08-22 19:56</abbr>
-
-    </span>
-
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/win10_markdownpad2_livepreview_err.html#comments">2 Comments</a>
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/win10_markdownpad2_livepreview_err.html#trackbacks">0 TrackBacks</a>
-
-</p>
- 
-</header>
-
-<div class="asset-body"><p>一直以来都是使用 <a href="http://markdownpad.com/">MarkdownPad 2</a> 来写Blog。<br />
-在win7系统下，这个是写 <a href="http://www.baidu.com/s?wd=Markdown&amp;ie=UTF-8">Markdown</a> 格式文档的利器，因为其的实时预览模式，实在是太强悍了。 <br />
-但是最近<a href="http://easun.org/blog/archives/windows_10_is_coming.html">升级到了win10</a>，打开 <a href="http://markdownpad.com/">MarkdownPad 2</a> 后，实时预览功能居然失效了，提示如图。
-<a data-lightbox="easun" href="http://easun.org/blog/upload/md_pd.png"><img alt="md_pd.png" src="http://easun.org/blog/upload/cache/2015/08/md_pd-thumb-350xauto-65.png" width="350" height="196" class="mt-image-none" style="" /></a></p>
-
-<p>难道要逼我换软件吗？ 在 <a href="http://markdownpad.com/faq.html#livepreview-directx">http://markdownpad.com/faq.html#livepreview-directx</a> 这里发现了一些信息：</p>
-
-<blockquote>
-  <p><strong>LivePreview is not working - it displays an error message stating This view has crashed!</strong></p>
-
-<p>This issue has been specifically observed in Windows 8. You may see an error message as shown here, and no HTML will be rendered when you type in the Markdown Editor pane.</p>
-
-<p>To fix this issue, please try installing the <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK.</a></p>
-
-<p>If you continue to experience issues, please install Microsoft's DirectX End-User Runtimes (June 2010).</p>
-</blockquote>
-
-<p>OK， 那就先试试 <a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK.</a></p>
-
-<p>下载，My God，居然 110 M。。。。</p>
-
-<p>下载安装，再次打开，一切正常：） </p>
-
-<p><a data-lightbox="easun" href="http://easun.org/blog/upload/md_pd_ok.png"><img alt="md_pd_ok.png" src="http://easun.org/blog/upload/cache/2015/08/md_pd_ok-thumb-350xauto-66.png" width="350" height="210" class="mt-image-none" style="" /></a></p>
 </div>
-
-<section class="entry-tags">
-    <h4>Tags<span class="delimiter">:</span></h4>
-    <ul>
-        <li><a href="http://easun.org/blog/tag/MarkdownPad2" rel="tag">MarkdownPad2</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/win10" rel="tag">win10</a></li>
-    </ul>
-</section>
-
-
-
-
-<p>--<acronym title="End of File">EOF</acronym>--</p>
-
-<p> </p>
-</article>
-
-
-  <article class="post clearfix">
-<header>
- <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/sitelog_aug_sth.html" rel="bookmark">[SiteLog]近日网站折腾小记</a>
- 
-<small><a href="http://easun.org/blog/program/" rel="tag">程序人生</a></small>,<small><a href="http://easun.org/blog/sitelog/" rel="tag">站务记录</a></small>
-
-</h2>
-    <p class="post-meta">
-    <span class="byline">
-
-        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-22T17:42:52+08:00">2015-08-22 17:42</abbr>
-
-    </span>
-
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sitelog_aug_sth.html#comments">3 Comments</a>
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sitelog_aug_sth.html#trackbacks">0 TrackBacks</a>
-
-</p>
- 
-</header>
-
-<div class="asset-body"><p>8月快过去了。时间真的是。。。。 <br />
-顺便记下这几天对网站的一些小小的折腾吧。</p>
-
-<p><strong>1. 多说评论显示逻辑调整：</strong>   </p>
-
-<p>还是要从<a href="http://duoshuo.com/">多说</a>说起： 路杨已经基本上<a href="http://easun.org/blog/archives/sth_about_mt_db.html">实现了把所有的多说评论同步到了本地</a>。 默认同步到多说评论处于未发布状态，防止和多说JS载入的评论形成重复评论。 定时把本地数据库的多说评论转成发布状态，以防止多说服务器抽风导致评论不显示。</p>
-
-<p>但是问题来了： 怎么让同步并本地发布的同一条评论只显示一次呢？ 原来的实现办法是在 <a href="http://static.duoshuo.com/embed.js">多说JS</a> 中识别这条评论是否已经本地发布，如果发布则 hook <a href="http://static.duoshuo.com/embed.js">多说JS</a> 的 <code>templates.post</code> 函数，<strong>让它不生成这条评论</strong>。<br />
-核心代码如下：</p>
-
-<pre><code>var DSinMTids = [];
-function check_ds_in_mts() {
-   DSinMTids = [];
-   $("#comments-content div.ds-post-self").each(function()
-   { 
-     if ( ( $(this).attr("data-source") == 'duoshuo' ))
-      { 
-       DSinMTids.push($(this).attr("data-post-id"));
-      }
-  });
-}
-
-check_ds_in_mts(); 
-var _D_post=DUOSHUO.templates.post; 
-DUOSHUO.templates.post=function (e,t){
-  var rs=_D_post(e,t);            
-  if ( $.inArray(e.post.post_id, DSinMTids) != -1 return '';
-  /* sth others*/
-  return rs;
-}
-</code></pre>
-</div>
-
-<section class="entry-tags">
-    <h4>Tags<span class="delimiter">:</span></h4>
-    <ul>
-        <li><a href="http://easun.org/blog/tag/js" rel="tag">js</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/pjax" rel="tag">pjax</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/QQ%E4%BA%92%E8%81%94" rel="tag">QQ互联</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/SiteLog" rel="tag">SiteLog</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E8%AF%84%E8%AE%BA" rel="tag">评论</a></li>
-    </ul>
-</section>
-
-
-
-
-        <p class="asset-more-link">
-        <span class="read_more">»继续阅读</span> "<a href="http://easun.org/blog/archives/sitelog_aug_sth.html#more" rel="bookmark">[SiteLog]近日网站折腾小记</a>" 。
-        </p>
-
-<p> </p>
-</article>
-
-
-  <article class="post clearfix">
-<header>
- <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/sth_about_mt_db.html" rel="bookmark">[随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>
- 
-<small><a href="http://easun.org/blog/mt/" rel="tag">Movable Type</a></small>,<small><a href="http://easun.org/blog/perl/" rel="tag">Perl</a></small>
-
-</h2>
-    <p class="post-meta">
-    <span class="byline">
-
-        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-17T22:42:11+08:00">2015-08-17 22:42</abbr>
-
-    </span>
-
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#comments">6 Comments</a>
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/sth_about_mt_db.html#trackbacks">1 TrackBack</a>
-
-</p>
- 
-</header>
-
-<div class="asset-body"><p><strong>随笔</strong> 而已，能力所限，只是个人看法。</p>
-
-<p>就向大家看见的这样，由于<a href="http://duoshuo.com/">多说</a>服务器的原因，路杨正在逐步把 多说的评论写回本地 <a href="http://www.movabletype.org/">Movable Type</a> 的数据库。</p>
-
-<p>过程不算难。通过 <a href="http://dev.duoshuo.com/docs/50037b11b66af78d0c000009">API</a> 获得 JSON 数据，分析后写入MT评论数据库罢了。
-为了区分和拓展，给 MT 数据库的评论表增加了3行，分别记录 远程服务器名（<code>remote_service</code>），远程服务器ID (<code>remote_id</code>) 和 UA (
-<code>agent</code>)。</p>
-
-<p><a data-lightbox="easun" href="http://easun.org/blog/upload/mt_db_table_comment.png"><img alt="mt_db_table_comment.png" src="http://easun.org/blog/upload/cache/2015/08/mt_db_table_comment-thumb-350xauto-62.png" width="350" height="291" class="mt-image-none" style="" /></a></p>
-
-<p>开始直接 Perl 脚本。核心代码为 </p>
-</div>
-
-<section class="entry-tags">
-    <h4>Tags<span class="delimiter">:</span></h4>
-    <ul>
-        <li><a href="http://easun.org/blog/tag/MT" rel="tag">MT</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/MySQL" rel="tag">MySQL</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/Perl" rel="tag">Perl</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E7%93%B6%E9%A2%88" rel="tag">瓶颈</a></li>
-    </ul>
-</section>
-
-
-
-
-        <p class="asset-more-link">
-        <span class="read_more">»继续阅读</span> "<a href="http://easun.org/blog/archives/sth_about_mt_db.html#more" rel="bookmark">[随笔]Movable Type 的数据库瓶颈与多说评论反向同步</a>" 。
-        </p>
-
-<p> </p>
-</article>
-
-
-  <article class="post clearfix">
-<header>
- <h2 class="post-title entry-title"><a href="http://easun.org/blog/archives/about_duoshuo_db.html" rel="bookmark">[随笔]多说的几项不足</a>
- 
-<small><a href="http://easun.org/blog/other/" rel="tag">八卦杂谈</a></small>,<small><a href="http://easun.org/blog/sitelog/" rel="tag">站务记录</a></small>
-
-</h2>
-    <p class="post-meta">
-    <span class="byline">
-
-        By <span class="vcard author"><a class="fn url" href="http://easun.org">路杨</a></span> @ <abbr class="published" title="2015-08-12T16:49:03+08:00">2015-08-12 16:49</abbr>
-
-    </span>
-
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#comments">8 Comments</a>
-    <span class="separator">|</span> <a href="http://easun.org/blog/archives/about_duoshuo_db.html#trackbacks">0 TrackBacks</a>
-
-</p>
- 
-</header>
-
-<div class="asset-body"><p><a data-lightbox="easun" href="http://easun.org/blog/upload/ds.png"><img alt="ds.png" src="http://easun.org/blog/upload/cache/2015/08/ds-thumb-350xauto-58.png" width="350" height="145" class="mt-image-none" style="" /></a></p>
-
-<p>昨天晚上，又经历了一次<a href="http://duoshuo.com/">多说</a>服务器的当机。<code>SQLSTATE[08004] [1040] Too many connections</code> 。显然是数据库连接数超过资源限制。 <br />
-于是乎，多说的稳定性又得到了挑战。   </p>
-
-<p>看看长草的<a href="http://dev.duoshuo.com/discussion">官方</a> 和久久不更新的<a href="http://dev.duoshuo.com/blog">Blog</a>。。不由叹息： 这本来是多好的互联网产品啊。。。</p>
-
-<p>不说这些了。这几天抽空在研究 <a href="http://dev.duoshuo.com/docs">多说的API</a>，为把多说的评论同步回本地而做准备。 研究过程中谈谈多说的一些不足吧。</p>
-
-<ol start='1'>
-<li><strong>API文档严重不足</strong>： 这倒是像搞技术的通病。茶壶里的饺子的事情，不说也罢。 不单是多说的API这样，腾讯的<a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5">API文档</a>也是。</li>
-<li><strong>数据库储存逻辑</strong>很奇怪。 从<a href="http://dev.duoshuo.com/docs/50037b11b66af78d0c000009">反向同步API</a>返回的数据来看。 多说对于用户评论并没有真正的删除说法，而是永久存储？ 所谓的删除仅仅是新加上一条记录。 设置 <code>meta</code> 为 <code>delete</code> 或者 <code>delete-forever</code>。 开始没有搞明白这个逻辑，将 <code>http://api.duoshuo.com/log/list.json?short_name=short_name&amp;secret=secret_key&amp;limit=200</code> 拉下来的数据直接写入数据库，发现了很多已经删除的评论。。。  <br />多说的数据库真的富裕成这个样子了吗？</li>
-<li><strong>用户</strong>。 在多说管理界面添加或者<a href="http://dev.duoshuo.com/docs/51435552047fe92f490225de">同步的本地用户</a>（<code>http://short_name.duoshuo.com/admin/users/</code>）无法删除。。 这个是什么逻辑？</li>
-<li><strong>删除评论</strong>： API文档中没有告诉你怎么<strong>删除评论</strong>。 只有怎么<a href="http://dev.duoshuo.com/docs/512d6e2e418847315a000001">发表评论</a>。 其实这个删除功能还是很必要的，我的想法，同步到本地后随即删除已经同步的的远程服务器评论，是一个多么合适的选择。可惜，官方并没有提供。</li>
-<li>对于 <code>ssl(https)</code> 的漠视： 其实多说自身的代码已经很好的支持<code>https</code> ,但是在 https 下会汇报风险的原因，只是因为头像和表情的地址不支持 https 罢了。 但是官方客服在讨论区中明确回复： <code>头像和表情不需要HTTPS.</code>。 虽然，第3方修改JS可以完全实现全站https, 但是第3方的修改总是第3方的。</li>
-</ol>
-
-<p>嗯，随便写点流水帐。 附上自写的部分处理逻辑</p>
-
-<pre><code>    return if ( @{$action-&gt;{'delete-forever'}} ~~ /$ds-&gt;{'post_id'}/ );
-    return if ( @{$action-&gt;{'delete'}} ~~ /$ds-&gt;{'post_id'}/);
-    return if ( @{$action-&gt;{'spam'}} ~~ /$ds-&gt;{'post_id'}/);
-</code></pre>
-</div>
-
-<section class="entry-tags">
-    <h4>Tags<span class="delimiter">:</span></h4>
-    <ul>
-        <li><a href="http://easun.org/blog/tag/%E5%A4%9A%E8%AF%B4" rel="tag">多说</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E8%AF%84%E8%AE%BA" rel="tag">评论</a><span class="delimiter">,</span></li> <li><a href="http://easun.org/blog/tag/%E9%9A%8F%E7%AC%94" rel="tag">随笔</a></li>
-    </ul>
-</section>
-
-
-
-
-<p>--<acronym title="End of File">EOF</acronym>--</p>
-
-<p> </p>
-</article>
-
-
-<span id="current-page" class="hidden">1</span>
-
-
-<nav class="navigation"><ul class="pagination"><li><a class="active" href="http://easun.org/blog/" title="当前页">1</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=2" title="第2页">2</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=3" title="第3页">3</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=4" title="第4页">4</a></li> <li><a href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=5" title="第5页">5</a></li> <li><a rel="prev" href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=2" title="下一页">下一页»</a></li> <li><a rel="end" href="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=51" title="尾页">尾页</a></li></ul></nav>
-
-</div>
-
-</div>
-
 <div class="show-more"><span class="show-more" id="show-more" data-type="index" data-nexturl="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=2" data-index-totalpages="51">第1页/共51页，加载更多</span></div>
 </div><!-- /#content -->
 <aside id="sidebar">
@@ -439,7 +86,49 @@ This blog is licensed under a <a href="http://creativecommons.org/licenses/by-nc
 var blog_id = '2';
 var page_id = '';
 mtAttachEvent('usersignin', mtUpdateSignInWidget);mtUpdateSignInWidget();
-$(document).ready(function(){Pagination_ajax(); });
+var $search_link="http://mt.easun.org/cgi-bin/mt/search?IncludeBlogs=2&amp;template_id=657&amp;limit=5&amp;archive_type=Index&amp;page=";
+var $resultContainer = $('#search-results');
+
+function getcurrentPage() { var cp =0;  if ($('#current-page').length >0 ){ cp = parseInt( $('#current-page').html());  return cp;} }
+var currentPage = getcurrentPage(); 
+var totalPages =0; 
+if ($('#current-page').length >0 ){ currentPage = parseInt( $('#current-page').html()); }
+if ( $('#show-more').length  >0 ) {totalPages = $('#show-more').attr("data-index-totalpages"); }
+
+$(util.RenderPaginationForType("index",currentPage, totalPages)).appendTo($resultContainer);
+
+$(document).on('click', '[data-index][data-page]', function (e) { 
+   e.preventDefault(); 
+   var $this = $(this); 
+   if ($this.hasClass("active")) return;
+   var page = $this.data('page'); 
+   var url=   $search_link +  page; 
+   
+    if ( $('#show-more').length > 0 ) {
+	   if ($('#show-more').hasClass("is-loading"))  return false;
+	   $('#show-more').html("loading...").addClass("is-loading");
+     }
+     pagination.get(url, 'append');   
+   });
+
+
+$(document).on('click', '#show-more', function (e) { 
+         e.preventDefault(); 
+         var $this = $(this); 
+         currentPage = getcurrentPage(); 
+         if ( currentPage < totalPages) {
+         	 var page = currentPage +1;
+         	 var url=   $search_link +  page; 
+	        if ($this.hasClass("is-loading"))  return false;
+	            $this.html("loading...").addClass("is-loading");            
+	            pagination.get(url, 'append'); 
+	  }
+      });
+      
+ function LoadMainPage() {  currentPage = getcurrentPage();  if ( currentPage == 0) {  var url=   $search_link +  "1";  pagination.get(url, 'append');  }      }
+
+$(document).ready(function(){ LoadMainPage(); });
+  
 /* ]]> */
 </script>
 <script type="text/javascript">/* <![CDATA[ */$(function() { var _surl = "http://easun.org/search/" ; $('#search').keydown(function(e){ var sq = $(this).val(); if ( (sq !='') && (e.keyCode=="13")){location.href = _surl + "#stq=" + encodeURIComponent(sq) + "&stp=1" ; } });});/* ]]> */</script>
