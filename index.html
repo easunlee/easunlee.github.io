@@ -83,9 +83,8 @@ This blog is licensed under a <a href="http://creativecommons.org/licenses/by-nc
 var blog_id = '2';
 var page_id = '';
 mtAttachEvent('usersignin', mtUpdateSignInWidget);mtUpdateSignInWidget();
-var $search_link="http://easun.org/cgi-bin/mt/search?IncludeBlogs=2&template_id=657&limit=5&archive_type=Index&page=";var $resultContainer = $('#search-results');function getcurrentPage() { var cp =0; if ($('#current-page').length >0 ){ cp = parseInt( $('#current-page').html()); return cp;} }var currentPage = getcurrentPage(); var totalPages =0; if ($('#current-page').length >0 ){ currentPage = parseInt( $('#current-page').html()); }if ( $('#show-more').length >0 ) {totalPages = $('#show-more').attr("data-index-totalpages"); }/*$(util.RenderPaginationForType("index",currentPage, totalPages)).appendTo($resultContainer);*/$(document).on('click', '[data-index][data-page]', function (e) { e.preventDefault(); var $this = $(this); if ($this.hasClass("active")) return; var page = $this.data('page'); var url= $search_link + page; if ( $('#show-more').length > 0 ) { if ($('#show-more').hasClass("is-loading")) return false; $('#show-more').html("loading...").addClass("is-loading"); } pagination.get(url, 'append'); });$(document).on('click', '#show-more', function (e) { e.preventDefault(); var $this = $(this); currentPage = getcurrentPage(); if ( currentPage < totalPages) { var page = currentPage +1; var url= $search_link + page; if ($this.hasClass("is-loading")) return false; $this.html("loading...").addClass("is-loading"); pagination.get(url, 'append'); } });
-function LoadMainPage() {  currentPage = getcurrentPage();  if ( currentPage == 0) {  var url=   $search_link +  "1";  pagination.get(url, 'append');  }  }
-$(document).ready(function(){ LoadMainPage(); });	
+var $search_link="http://easun.org/cgi-bin/mt/search?IncludeBlogs=2&template_id=657&limit=5&archive_type=Index&page=";
+pagination.init();
 /* ]]> */
 </script>
 <script type="text/javascript">/* <![CDATA[ */$(function() { var _surl = "http://easun.org/search/" ; $('#search').keydown(function(e){ var sq = $(this).val(); if ( (sq !='') && (e.keyCode=="13")){location.href = _surl + "#stq=" + encodeURIComponent(sq) + "&stp=1" ; } });});/* ]]> */</script>
