@@ -89,7 +89,7 @@ var blog_id = '2';
 var page_id = '';
 mtAttachEvent('usersignin', mtUpdateSignInWidget);mtUpdateSignInWidget();
 var $search_link="https://easun.org/cgi-bin/mt/search?IncludeBlogs=2&template_id=657&limit=5&archive_type=Index&page=";
-pagination.init();
+pagination.init($search_link);
 /* ]]> */
 </script>
 <script type="text/javascript">/* <![CDATA[ */$(function() { var _surl = "http://easun.org/search/" ; $('#search').keydown(function(e){ var sq = $(this).val(); if ( (sq !='') && (e.keyCode=="13")){location.href = _surl + "#stq=" + encodeURIComponent(sq) + "&stp=1" ; } });});/* ]]> */</script>
